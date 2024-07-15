@@ -1,6 +1,6 @@
 {
 	"name": "zenos-mon-toy",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "简化版的nodemon, nodemon玩具🪀",
 	"main": "src/core.js",
 	"bin": {
