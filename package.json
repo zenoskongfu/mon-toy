@@ -1,21 +1,27 @@
 {
 	"name": "zenos-mon-toy",
 	"version": "1.0.1",
-	"description": "",
+	"description": "简化版的nodemon, nodemon玩具🪀",
 	"main": "src/core.js",
 	"bin": {
 		"mon-toy": "./lib/index.js"
 	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"keywords": [
+		"node",
+		"nodemon",
+		"cli"
+	],
+	"author": "zenos.chen@foxmail.com",
+	"license": "MIT",
 	"devDependencies": {
 		"@types/node": "^20.14.10"
 	},
 	"dependencies": {
 		"chokidar": "^3.6.0"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/zenoskongfu/node-mon"
+	},
+	"homepage": "https://juejin.cn/post/7391699424844562483"
 }
