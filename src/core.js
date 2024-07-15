@@ -1,11 +1,8 @@
 const { exec } = require("child_process");
-const path = require("path");
 const watchFile = require("./watchFile");
 
 module.exports = function core(options) {
 	const { fileName, fileArgs, watch } = options;
-	const cwd = process.cwd();
-	const filePath = path.resolve(cwd, fileName);
 
 	const run = () => {
 		exec(`node ${fileName} ${fileArgs.join(" ")}`, (error, stdout, stderr) => {
@@ -25,7 +22,7 @@ module.exports = function core(options) {
 		// 执行文件
 		run();
 		// 指定被监听的文件
-		const watchFiles = watch ? path.resolve(cwd, watch) : filePath;
+		const watchFiles = watch ? watch : fileName;
 		// 监听文件的变化
 		watchFile(watchFiles, (path) => {
 			console.log(`${path} changed!!!!\n`);

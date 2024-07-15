@@ -1,3 +1,6 @@
+const path = require("path");
+const cwd = process.cwd();
+
 const getArgs = (source, key) => {
 	const index = source.indexOf(key);
 	let value = null;
@@ -19,9 +22,9 @@ const handleArgs = (args) => {
 		args.splice(2, 1);
 	}
 	return {
-		fileName: filename["-f"],
-		watch: watchFile ? watchFile["-w"] : null,
-		fileArgs: args.slice(2),
+		fileName: path.resolve(cwd, filename["-f"]),
+		watch: watchFile ? path.resolve(cwd, watchFile["-w"]) : null,
+		fileArgs: args.slice(2) || [],
 	};
 };
 
