@@ -2,7 +2,7 @@ const { exec } = require("child_process");
 const watchFile = require("./watchFile");
 
 module.exports = function core(options) {
-	const { fileName, fileArgs, watch } = options;
+	const { fileName, fileArgs = [], watch } = options;
 
 	const run = () => {
 		exec(`node ${fileName} ${fileArgs.join(" ")}`, (error, stdout, stderr) => {

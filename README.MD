@@ -4,7 +4,9 @@
 
 ## 安装
 
+```shell
 npm i node-mon -g
+```
 
 ## cli
 
@@ -32,11 +34,11 @@ mon-toy -f test.js 1 2 -w add.js
 
 ```js
 const monToy = require('mon-toy');
-
+const path = require('path');
 monToy({
-  fileName: './test.js',
+  fileName: path.resolve(__dirname,'./test.js'),
   fileArgs:[1,2], 
-  watch:'add.js'
+  watch:path.resolve(__dirname,'./add.js')
 })
 
 ```
