@@ -30,14 +30,14 @@ mon-toy test.js 1 2
 
 还可以通过 `-w` 指定监听的文件，`-f` 指定运行的文件：
 
-You can also specify the file to watch with -w and the file to run with -f:
+You can also specify the file to watch with `-w` and the file to run with `-f`:
 
 ```shell
 mon-toy -f test.js 1 2 -w add.js
 ```
 当 `add.js` 文件发生变化后，mon-toy会重新执行 `test.js` 文件
 
-When the add.js file changes, mon-toy will re-execute the test.js file.
+When the `add.js` file changes, mon-toy will re-execute the `test.js` file.
 
 
 ## api
