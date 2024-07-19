@@ -1,7 +1,7 @@
 {
 	"name": "zenos-mon-toy",
-	"version": "1.0.4",
-	"description": "简化版的nodemon, nodemon玩具🪀",
+	"version": "1.0.5",
+	"description": "This is a toy, like nodemon",
 	"main": "src/core.js",
 	"bin": {
 		"mon-toy": "./lib/index.js"
