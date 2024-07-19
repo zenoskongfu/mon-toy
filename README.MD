@@ -7,7 +7,7 @@ This is a small toy imitating nodemon, hence called mon-toy.
 ## 安装 Install
 
 ```shell
-npm i node-mon -g
+npm i zenos-node-mon -g
 ```
 
 ## cli
